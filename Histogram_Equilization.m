@@ -2,8 +2,7 @@ clc;
 close all;
 clear all;
 
-input_image = imread ("C:\Users\DarkM\OneDrive\Pictures\Camera Roll\20230203_002159.jpg");
-input_image = imread("C:\Users\DarkM\OneDrive\Pictures\Camera Roll\20230527_172341.jpg");
+input_image = imread("images/vintage_car.jpeg");
 
 input_image = im2gray(input_image);
 image_hist = imhist(input_image);
@@ -37,7 +36,6 @@ subplot(2,3,6);
 plot(imhist(output_image)); title('Output Image Histogram');
 ylabel('Frequency'); xlabel('Intensity')
 
-% figure;
-% pdf_hist_output = imhist(output_image)./ numel(output_image);
-% cdf_hist_output = cumsum(pdf_hist_output);
+
+
 % plot (cdf_hist_output);
