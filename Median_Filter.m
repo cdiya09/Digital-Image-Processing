@@ -1,7 +1,7 @@
 clc;
+close all;
 
-
-input_image = imread ("images/owl_salt&pepper");
+input_image = imread ("images/owl_salt&pepper.jpeg");
 input_image = imresize(im2gray(input_image), 1.5);
 
 n = input("Enter kernel size ");       
@@ -34,3 +34,4 @@ plot(imhist(output_image)); ylabel('Frequency'); xlabel('Intensity'); title('Fil
 
 
 sgtitle('Median Filter');
+
