@@ -2,10 +2,7 @@ clc;
 close all;
 clear all;
 
-%input_image = imread ("C:\Users\DarkM\OneDrive\Pictures\IMG-20230424-WA0021.jpg");
-%input_image = imread ("C:\Users\DarkM\OneDrive\Pictures\Camera Roll\20221210_163022.jpg");
-%input_image = imread ("C:\Users\DarkM\OneDrive\Pictures\Camera Roll\20230203_002159.jpg");
-input_image = imread("C:\Users\DarkM\OneDrive\Pictures\Camera Roll\20230527_172341.jpg");
+input_image = imread("images/vintage_car.jpeg");
 
 input_image = im2gray(input_image);
 input_hist = imhist(input_image);
@@ -63,5 +60,6 @@ plot(pdf_hist_ref); title('Reference PDF');
 
 subplot(2,5,9);
 plot(cdf_hist_ref); title('Reference CDF');
+
 
 
