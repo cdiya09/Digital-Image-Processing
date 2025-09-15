@@ -1,7 +1,7 @@
 clc;
 
 
-input_image = imread ("C:\Users\DarkM\OneDrive\Pictures\salt&pepper_owl.jpeg");
+input_image = imread ("images/owl_salt&pepper");
 input_image = imresize(im2gray(input_image), 1.5);
 
 n = input("Enter kernel size ");       
@@ -31,5 +31,6 @@ imshow(output_image); title('Filtered (Output) Image')
 
 subplot (2,2,4);
 plot(imhist(output_image)); ylabel('Frequency'); xlabel('Intensity'); title('Filtered (Output) Image Histogram');
+
 
 sgtitle('Median Filter');
