@@ -1,8 +1,7 @@
 clc;
 close all;
-clear all;
 
-input_image = imread("images/vintage_car.jpeg");
+input_image = imread("images/vintage_car.jpg");
 
 input_image = im2gray(input_image);
 image_hist = imhist(input_image);
@@ -39,3 +38,4 @@ ylabel('Frequency'); xlabel('Intensity')
 
 
 % plot (cdf_hist_output);
+
