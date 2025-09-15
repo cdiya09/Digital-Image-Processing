@@ -2,7 +2,7 @@ clc;
 close all;
 clear all;
 
-input_image = imread("images/vintage_car.jpeg");
+input_image = imread("images/vintage_car.jpg");
 
 input_image = im2gray(input_image);
 input_hist = imhist(input_image);
@@ -11,7 +11,7 @@ N = numel(input_image);
 pdf_hist = input_hist ./ N;  % PDF
 cdf_hist = cumsum(pdf_hist);  % CDF
 
-ref_image = imread ("images/tree_in_the_darkness");
+ref_image = imread ("images/tree_in_the_darkness.jpeg");
 ref_image = im2gray(ref_image);
 ref_hist = imhist(ref_image);
 M = numel(ref_image);
@@ -60,6 +60,7 @@ plot(pdf_hist_ref); title('Reference PDF');
 
 subplot(2,5,9);
 plot(cdf_hist_ref); title('Reference CDF');
+
 
 
 
