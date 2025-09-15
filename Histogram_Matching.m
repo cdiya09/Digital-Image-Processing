@@ -11,7 +11,7 @@ N = numel(input_image);
 pdf_hist = input_hist ./ N;  % PDF
 cdf_hist = cumsum(pdf_hist);  % CDF
 
-ref_image = imread ("C:\Users\DarkM\OneDrive\Pictures\Camera Roll\20230203_002159.jpg");
+ref_image = imread ("images/tree_in_the_darkness");
 ref_image = im2gray(ref_image);
 ref_hist = imhist(ref_image);
 M = numel(ref_image);
@@ -30,7 +30,7 @@ end
 %output_image = mapping(uint8((input_image) + 1);
 output_image = mapping(uint8(input_image) + 1);
 
-
+figure;
 subplot(2,5,1);
 imshow(input_image); title('Input Image');
 
@@ -60,6 +60,7 @@ plot(pdf_hist_ref); title('Reference PDF');
 
 subplot(2,5,9);
 plot(cdf_hist_ref); title('Reference CDF');
+
 
 
 
