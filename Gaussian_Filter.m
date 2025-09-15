@@ -1,7 +1,7 @@
 clc;
 close all;
 
-input_image = imread ("C:\Users\DarkM\OneDrive\Pictures\Camera Roll 1\IMG_20250523_183252671_HDR.jpg");
+input_image = imread ("images/vintage_car.jpg");
 input_image = imresize(imrotate(im2gray(input_image), -90), 1.5);
 
 n = input("Enter kernel size ");       
@@ -39,5 +39,6 @@ plot(imhist(output_image)); ylabel('Frequency'); xlabel('Intensity'); title('Fil
 sgtitle('Gaussian Filter');
 
 disp(round(kernel .* 1/kernel(1,1)));
+
 
 
